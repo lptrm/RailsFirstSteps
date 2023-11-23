@@ -1,0 +1,16 @@
+<!-- app/views/calculator/index.html.erb -->
+
+<h1>Simple Calculator</h1>
+
+<%= form_tag(calculate, method: 'post') %>
+  <%= label_tag 'num1', 'Number1: ' %>
+  <%= text_field_tag 'num1', nil, required: true %>
+
+  <%= label_tag 'operator', 'Operator: ' %>
+  <%= select_tag 'operator', options_for_select(%w[+ - * /], required: true) %>
+
+  <%= label_tag 'num2', 'Number2: ' %>
+  <% text_field_tag 'num1', nil, required: true %>
+
+  <% submit_tag 'Calculate' %>
+<% end %>
